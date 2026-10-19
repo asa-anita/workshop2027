@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Pre-launch: keep out of search engines. Remove at launch. -->
+    <meta name="robots" content="noindex, nofollow">
+    <title>Register for ANITA 2027</title>
+    <meta name="description" content="Register for the AI for Astrophysics Summer School (8-10 February 2027) and the 21st ANITA Science Workshop (11-12 February 2027), Swinburne University of Technology, Melbourne.">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:400,700,800">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="stylesheets/styles.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+            integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+            crossorigin="anonymous"></script>
+    <script src="javascripts/w3data.js"></script>
+    <script src="javascripts/site.js"></script>
+    <script src="javascripts/registration.js" defer></script>
+</head>
+
+<body>
+
+<div w3-include-html="snippets/header.html"></div>
+<div w3-include-html="snippets/nav.html"></div>
+
+<main class="container main">
+
+    <div class="page-hero">
+        <div class="kicker">Registration</div>
+        <h1>Register for ANITA 2027</h1>
+        <p class="lead">One form covers the whole week, 8&ndash;12 February 2027: the AI for Astrophysics Summer School (Mon&ndash;Wed) and the 21st ANITA Science Workshop (Thu&ndash;Fri). Tell us which parts you will attend and we will ask only the questions that apply.</p>
+    </div>
+
+    <div class="callout">
+        <ul>
+            <li><strong>No fees:</strong> the school and the workshop are both free to attend.</li>
+            <li><strong>Deadlines:</strong> summer school registration and workshop talk abstracts close on <strong>Monday 7 December 2026</strong>. Workshop registration (without a talk) closes on <strong>Monday 11 January 2027</strong>.</li>
+            <li><strong>Summer school places are limited</strong> to 30 and balanced across career stages, so a school registration is effectively an application. School places and workshop talks will be confirmed by Monday 11 January 2027.</li>
+            <li><strong>Questions?</strong> Email <a href="mailto:dcroton@swin.edu.au">dcroton@swin.edu.au</a>.</li>
+        </ul>
+    </div>
+
+    <!-- Shown by registration.js only while CONFIG.endpoint is empty (preview mode). -->
+    <div id="preview-note" class="callout callout-warm" hidden>
+        <p><strong>Preview: this form is not yet connected.</strong> Nothing you enter here is sent anywhere. Submitting shows a summary of what would be submitted, so the organisers can check the form.</p>
+    </div>
+
+    <noscript>
+        <div class="callout callout-warm">
+            <p>This registration form needs JavaScript. Please enable it, or email <a href="mailto:dcroton@swin.edu.au">dcroton@swin.edu.au</a> to register.</p>
+        </div>
+    </noscript>
+
+    <!-- Result panel (success, preview summary or error). Filled in by registration.js. -->
+    <div id="result" class="callout" role="status" aria-live="polite" tabindex="-1" hidden></div>
+
+    <form id="registration-form" method="post" action="#">
+
+        <p class="muted">Fields marked <span class="req"></span> are required.</p>
+
+        <!-- 1. About you -->
+        <fieldset class="form-section">
+            <legend>About you</legend>
+
+            <div class="field">
+                <label for="full_name" class="req">Full name</label>
+                <input type="text" id="full_name" name="full_name" autocomplete="name" required>
+            </div>
+
+            <div class="field">
+                <label for="email" class="req">Email</label>
+                <input type="email" id="email" name="email" autocomplete="email" required>
+            </div>
+
+            <div class="field">
+                <label for="pronouns">Pronouns (optional)</label>
+                <input type="text" id="pronouns" name="pronouns" autocomplete="off">
+            </div>
+
+            <div class="field">
+                <label for="institution" class="req">Institution</label>
+                <input type="text" id="institution" name="institution" autocomplete="organization" required>
+            </div>
+
+            <div class="field">
+                <label for="career_stage" class="req">Career stage</label>
+                <select id="career_stage" name="career_stage" required>
+                    <option value="">Select&hellip;</option>
+                    <option value="Honours/Masters student">Honours/Masters student</option>
+                    <option value="PhD student">PhD student</option>
+                    <option value="Postdoc / early career researcher">Postdoc / early career researcher</option>
+                    <option value="Research software engineer">Research software engineer</option>
+                    <option value="Academic staff">Academic staff</option>
+                    <option value="Other">Other</option>
+                </select>
+            </div>
+
+            <div class="field">
+                <div class="label" id="lbl-asa">Are you a member of the Astronomical Society of Australia (ASA)?</div>
+            </div>
+            <div class="choice-grid form-group" role="radiogroup" aria-labelledby="lbl-asa">
+                <label class="choice"><input type="radio" name="asa_member" value="Yes"> <span>Yes</span></label>
+                <label class="choice"><input type="radio" name="asa_member" value="No"> <span>No</span></label>
+                <label class="choice"><input type="radio" name="asa_member" value="Not sure"> <span>Not sure</span></label>
+            </div>
+
+            <div class="field">
+                <div class="label" id="lbl-anita">Are you a member of ANITA?</div>
+                <p class="hint">Not a member yet? <a href="https://anita.edu.au/membership.html" target="_blank" rel="noopener">Find out how to join</a>.</p>
+            </div>
+            <div class="choice-grid form-group" role="radiogroup" aria-labelledby="lbl-anita">
+                <label class="choice"><input type="radio" name="anita_member" value="Yes"> <span>Yes</span></label>
+                <label class="choice"><input type="radio" name="anita_member" value="No"> <span>No</span></label>
+                <label class="choice"><input type="radio" name="anita_member" value="No, but I would like to join"> <span>No, but I would like to join</span></label>
+            </div>
+        </fieldset>
+
+        <!-- 2. What will you attend? -->
+        <fieldset class="form-section" id="attend-section">
+            <legend><span class="req">What will you attend?</span></legend>
+
+            <p class="muted" id="attend-hint">Tick at least one. You can attend the school, the workshop, or both.</p>
+
+            <div class="choice-grid form-group">
+                <label class="choice">
+                    <input type="checkbox" id="attend-school" name="attend" value="AI for Astrophysics Summer School (Mon 8 &ndash; Wed 10 Feb)" aria-describedby="attend-hint attend-error">
+                    <span>AI for Astrophysics Summer School (Mon 8 &ndash; Wed 10 Feb)
+                        <small>Limited to 30 places; register by Mon 7 Dec 2026. Includes a one-month Claude Pro subscription.</small></span>
+                </label>
+                <label class="choice">
+                    <input type="checkbox" id="attend-workshop" name="attend" value="21st ANITA Science Workshop (Thu 11 &ndash; Fri 12 Feb)" aria-describedby="attend-hint attend-error">
+                    <span>21st ANITA Science Workshop (Thu 11 &ndash; Fri 12 Feb)</span>
+                </label>
+            </div>
+
+            <!-- Inline message for the "at least one" rule; unhidden by registration.js. -->
+            <div id="attend-error" class="callout callout-warm" role="alert" hidden>
+                <p>Please choose at least one: the summer school, the science workshop, or both.</p>
+            </div>
+
+            <!-- Social events: each option appears only when its parent event is ticked. -->
+            <div id="social-block" hidden>
+                <div class="field">
+                    <div class="label" id="lbl-social">Social events</div>
+                    <p class="hint">Optional. Tick the ones you plan to join.</p>
+                </div>
+                <div class="choice-grid" role="group" aria-labelledby="lbl-social">
+                    <div id="social-welcome-wrap" hidden>
+                        <label class="choice"><input type="checkbox" name="social" value="School welcome social (Mon 8 Feb evening)"> <span>School welcome social (Mon 8 Feb evening)</span></label>
+                    </div>
+                    <div id="social-dinner-wrap" hidden>
+                        <label class="choice"><input type="checkbox" name="social" value="Workshop dinner (Thu 11 Feb)"> <span>Workshop dinner (Thu 11 Feb; <span class="tbc">time and venue TBD</span>)</span></label>
+                    </div>
+                </div>
+            </div>
+        </fieldset>
+
+        <!-- 3. Summer school (shown only when the school is ticked) -->
+        <fieldset class="form-section" id="school-section" hidden>
+            <legend>Summer school</legend>
+
+            <div class="callout">
+                <p>The school includes about 3 hours of pre-work and a 60-minute online setup clinic, both in the week before the school. Every school participant receives a one-month Claude Pro subscription, which includes both the Claude chat assistant and Claude Code, the command-line coding agent used at the school, starting about a week beforehand. These answers help us balance the group and prepare the right level of support.</p>
+            </div>
+
+            <div class="field">
+                <div class="label req" id="lbl-ai">What is your experience with AI tools?</div>
+            </div>
+            <div class="choice-grid form-group" role="radiogroup" aria-labelledby="lbl-ai">
+                <label class="choice"><input type="radio" name="ai_experience" value="None yet" required> <span>None yet</span></label>
+                <label class="choice"><input type="radio" name="ai_experience" value="Occasional chat use" required> <span>Occasional chat use</span></label>
+                <label class="choice"><input type="radio" name="ai_experience" value="Regular use of chat assistants" required> <span>Regular use of chat assistants</span></label>
+                <label class="choice"><input type="radio" name="ai_experience" value="Regular use of coding agents" required> <span>Regular use of coding agents</span></label>
+            </div>
+
+            <div class="field">
+                <div class="label req" id="lbl-cli">How comfortable are you on the command line?</div>
+            </div>
+            <div class="choice-grid form-group" role="radiogroup" aria-labelledby="lbl-cli">
+                <label class="choice"><input type="radio" name="cli_comfort" value="Basic" required> <span>Basic</span></label>
+                <label class="choice"><input type="radio" name="cli_comfort" value="Comfortable" required> <span>Comfortable</span></label>
+                <label class="choice"><input type="radio" name="cli_comfort" value="Expert" required> <span>Expert</span></label>
+            </div>
+
+            <div class="field">
+                <div class="label req" id="lbl-git">What is your experience with git?</div>
+            </div>
+            <div class="choice-grid form-group" role="radiogroup" aria-labelledby="lbl-git">
+                <label class="choice"><input type="radio" name="git_experience" value="Never used" required> <span>Never used</span></label>
+                <label class="choice"><input type="radio" name="git_experience" value="Basic" required> <span>Basic</span></label>
+                <label class="choice"><input type="radio" name="git_experience" value="Daily" required> <span>Daily</span></label>
+            </div>
+
+            <div class="field">
+                <div class="label req" id="lbl-os">Which operating system will your laptop run?</div>
+                <p class="hint">Bring your own laptop. Windows users need WSL (Windows Subsystem for Linux) for the hands-on sessions.</p>
+            </div>
+            <div class="choice-grid form-group" role="radiogroup" aria-labelledby="lbl-os">
+                <label class="choice"><input type="radio" name="laptop_os" value="macOS" required> <span>macOS</span></label>
+                <label class="choice"><input type="radio" name="laptop_os" value="Linux" required> <span>Linux</span></label>
+                <label class="choice"><input type="radio" name="laptop_os" value="Windows with WSL" required> <span>Windows with WSL</span></label>
+                <label class="choice"><input type="radio" name="laptop_os" value="Windows without WSL" required> <span>Windows without WSL</span></label>
+            </div>
+
+            <div class="field">
+                <label for="github_username">GitHub username (optional)</label>
+                <input type="text" id="github_username" name="github_username" autocomplete="off">
+            </div>
+
+            <div class="field">
+                <label for="school_goals" class="req">What do you hope to get out of the school?</label>
+                <textarea id="school_goals" name="school_goals" rows="5" required></textarea>
+            </div>
+
+            <div class="field">
+                <div class="label" id="lbl-themes">Which project themes interest you?</div>
+                <p class="hint">Optional. Tick as many as you like; this helps us form teams.</p>
+            </div>
+            <div class="choice-grid form-group" role="group" aria-labelledby="lbl-themes">
+                <label class="choice"><input type="checkbox" name="project_themes" value="Modernise a legacy research code"> <span>Modernise a legacy research code</span></label>
+                <label class="choice"><input type="checkbox" name="project_themes" value="Reproduce a published result"> <span>Reproduce a published result</span></label>
+                <label class="choice"><input type="checkbox" name="project_themes" value="From archive to science result"> <span>From archive to science result</span></label>
+                <label class="choice"><input type="checkbox" name="project_themes" value="Verified literature review"> <span>Verified literature review</span></label>
+                <label class="choice"><input type="checkbox" name="project_themes" value="Build a toolkit for your group"> <span>Build a toolkit for your group</span></label>
+                <label class="choice"><input type="checkbox" name="project_themes" value="AI as a proposal reviewer"> <span>AI as a proposal reviewer</span></label>
+                <label class="choice"><input type="checkbox" id="theme-byo" name="project_themes" value="Bring your own project"> <span>Bring your own project</span></label>
+            </div>
+
+            <div class="field" id="pitch-field" hidden>
+                <label for="project_pitch" class="req">One-paragraph pitch for your own project</label>
+                <textarea id="project_pitch" name="project_pitch" rows="5" required></textarea>
+            </div>
+
+            <div class="choice-grid form-group">
+                <label class="choice"><input type="checkbox" name="mentor" value="Yes"> <span>I am happy to act as a mentor for less experienced participants</span></label>
+            </div>
+        </fieldset>
+
+        <!-- 4. Science workshop (shown only when the workshop is ticked) -->
+        <fieldset class="form-section" id="workshop-section" hidden>
+            <legend>Science workshop</legend>
+
+            <div class="field">
+                <div class="label req" id="lbl-talk">Would you like to give a talk?</div>
+            </div>
+            <div class="choice-grid form-group" role="radiogroup" aria-labelledby="lbl-talk">
+                <label class="choice"><input type="radio" id="talk-yes" name="give_talk" value="Yes, a talk" required> <span>Yes, a talk</span></label>
+                <label class="choice"><input type="radio" name="give_talk" value="No" required> <span>No</span></label>
+            </div>
+
+            <div id="talk-details" hidden>
+                <div class="field">
+                    <label for="talk_title" class="req">Talk title</label>
+                    <input type="text" id="talk_title" name="talk_title" autocomplete="off" required>
+                </div>
+
+                <div class="field">
+                    <label for="talk_abstract" class="req">Abstract</label>
+                    <p class="hint">Maximum <span id="abstract-limit">250</span> words.</p>
+                    <textarea id="talk_abstract" name="talk_abstract" rows="8" required aria-describedby="abstract-status"></textarea>
+                    <p class="hint" id="abstract-status">
+                        <span id="abstract-count">0 words</span>
+                        <span id="abstract-warning" class="tbc" aria-live="polite"></span>
+                    </p>
+                </div>
+
+            </div>
+        </fieldset>
+
+        <!-- 5. Practicalities -->
+        <fieldset class="form-section">
+            <legend>Practicalities</legend>
+
+            <div class="field">
+                <label for="dietary">Dietary requirements (optional)</label>
+                <textarea id="dietary" name="dietary" rows="2"></textarea>
+            </div>
+
+            <div class="field">
+                <label for="accessibility">Parental and accessibility needs we can help with (optional)</label>
+                <textarea id="accessibility" name="accessibility" rows="2"></textarea>
+            </div>
+
+            <div class="field">
+                <label for="comments">Other comments (optional)</label>
+                <textarea id="comments" name="comments" rows="3"></textarea>
+            </div>
+        </fieldset>
+
+        <!-- 6. Consent -->
+        <fieldset class="form-section">
+            <legend>Consent</legend>
+
+            <div class="choice-grid form-group">
+                <label class="choice"><input type="checkbox" name="code_of_conduct" value="Agreed" required> <span class="req">I agree to follow the <a href="conduct.html" target="_blank" rel="noopener">ASA code of conduct</a></span></label>
+            </div>
+        </fieldset>
+
+        <p>
+            <button type="submit" id="submit-btn" class="btn btn-cta">Submit registration</button>
+        </p>
+    </form>
+
+</main>
+
+<div class="container footer" w3-include-html="snippets/footer.html"></div>
+
+</body>
+</html>
