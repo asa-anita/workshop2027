@@ -28,6 +28,12 @@
      *   what would be submitted, plus a "not yet connected" notice on the
      *   page.
      *
+     *   CURRENT SETUP: option (c), a Google Apps Script web app that appends
+     *   each registration to a Google Sheet (source: registration-backend/Code.gs,
+     *   kept outside this repository). Leave fieldMap empty (field names are
+     *   sent as they are) and mode "no-cors". After editing the script,
+     *   redeploy it as a new version; the /exec URL does not change.
+     *
      *   Option (a): a Google Form (past ANITA years used these).
      *     1. Build a Google Form whose questions match this form. Option
      *        text for dropdown, radio and checkbox questions must match the
@@ -66,7 +72,7 @@
      *   Maximum words in the talk abstract.
      */
     var CONFIG = {
-        endpoint: '',
+        endpoint: 'https://script.google.com/macros/s/AKfycbz7iTjjPWe26dFql5wdwfvqt-Uj4VNFgd3ohTllWfmpxqFxaGmpUabnlkX1zWZjM3V5/exec',
         fieldMap: {
             // Example (uncomment and complete when using a Google Form):
             // full_name: 'entry.1111111111',
