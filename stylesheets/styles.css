@@ -375,6 +375,13 @@ a:hover, a:focus {
     color: var(--muted);
 }
 
+/* Small bold column heading, a little above body text size (committee lists). */
+.section .committee-title {
+    margin-top: 0;
+    font-size: 17px;
+    font-weight: 700;
+}
+
 /*
  * Cards
  */
