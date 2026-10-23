@@ -470,7 +470,7 @@
         var link = make('a', CONTACT_EMAIL);
 
         link.href = 'mailto:' + CONTACT_EMAIL;
-        note.appendChild(document.createTextNode('We will be in touch by email; school places are confirmed after registration closes. If anything needs changing, contact '));
+        note.appendChild(document.createTextNode('We will be in touch by email; school places and workshop talks are confirmed on Monday 7 December for registrations received by 1 December. If anything needs changing, contact '));
         note.appendChild(link);
         note.appendChild(document.createTextNode('.'));
 
