@@ -29,7 +29,7 @@
      *   page.
      *
      *   CURRENT SETUP: option (c), a Google Apps Script web app that appends
-     *   each registration to a Google Sheet (source: registration-backend/Code.gs,
+     *   each registration to a Google Sheet (source: organising/Code.gs,
      *   kept outside this repository). Leave fieldMap empty (field names are
      *   sent as they are) and mode "no-cors". After editing the script,
      *   redeploy it as a new version; the /exec URL does not change.
