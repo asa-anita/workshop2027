@@ -371,6 +371,12 @@ a:hover, a:focus {
     font-size: 16px;
 }
 
+/* Numbered list of long clauses (code of conduct): space the items apart. */
+.conduct-list > li {
+    margin-bottom: 10px;
+    padding-left: 4px;
+}
+
 .muted {
     color: var(--muted);
 }
